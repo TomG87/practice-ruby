@@ -6,3 +6,4 @@ p "The item you are buying is an #{item_1[:product]} that is #{item_1[:color]} i
 
 p "The item you are buying is an #{item_2[:product]} that is #{item_2[:color]} in color and will cost #{item_2[:price]}"
 
+p "The item you are buying is a #{item_3[:product]} that is #{item_3[:color]} in color and will cost #{item_3[:price]}"
