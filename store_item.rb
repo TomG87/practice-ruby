@@ -8,15 +8,17 @@
 
 # p "The item you are buying is a #{item_3[:product]} that is #{item_3[:color]} in color and will cost #{item_3[:price]}"
 
-class Storeitem
-  def initialize (product, color, price)
-    @product = product
-    @color = color
-    @price = price
+class StoreItem
+  attr_reader :product, :color, :price
+  
+  def initialize (input_options)
+    @product = input_options[:product]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
   def print_info
-    "The item you are buying is an #{@product} that is #{@color} in color and will cost $#{@price.to_f}"
+    "The item you are buying is an #{@product} that is #{@color} in color and will cost $#{@color.to_f}"
   end
 
   def discount
@@ -24,7 +26,24 @@ class Storeitem
   end
 end
 
-item = Storeitem.new("Blueberry", "Blue", 2.00)
+item = StoreItem.new(
+  {
+  :product => "Bluberry",
+  :color =>  "Blue", 
+  :price =>  2.00
+  }
+)
 
 p item.print_info
 p item.discount
+
+item_2 = StoreItem.new(
+  {
+  :product => "Blackberry",
+  :color =>  "Purple", 
+  :price =>  5.00
+  }
+)
+
+p item_2.print_info
+p item_2.discount
