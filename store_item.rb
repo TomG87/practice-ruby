@@ -18,7 +18,7 @@ class StoreItem
   end
 
   def print_info
-    "The item you are buying is an #{@product} that is #{@color} in color and will cost $#{@color.to_f}"
+    "The item you are buying is an #{@product} that is #{@color} in color and will cost $#{@price}"
   end
 
   def discount
